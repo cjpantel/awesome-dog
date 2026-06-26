@@ -86,64 +86,37 @@
 
       <form class="booking-form" id="bookingForm" onsubmit="handleSubmit(event)">
 
-        <fieldset>
-          <legend>Your Contact Info</legend>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name <span class="required">*</span></label>
-              <input type="text" id="name" name="name" required placeholder="Jane Smith" />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address <span class="required">*</span></label>
-              <input type="email" id="email" name="email" required placeholder="jane@example.com" />
-            </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Jane Smith" />
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="204-555-0100" />
-            </div>
-            <div class="form-group">
-              <label for="organization">Organization / Company</label>
-              <input type="text" id="organization" name="organization" placeholder="Acme Corp" />
-            </div>
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="204-555-0100" />
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset>
-          <legend>Event Details</legend>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="event-type">Type of Event <span class="required">*</span></label>
-              <select id="event-type" name="event-type" required>
-                <option value="" disabled selected>Select event type</option>
-                <option value="employee">Employee Event</option>
-                <option value="union">Union Event</option>
-                <option value="wedding">Wedding</option>
-                <option value="sport">Sport Tournament</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="guests">Estimated Number of Guests <span class="required">*</span></label>
-              <input type="number" id="guests" name="guests" required min="1" placeholder="e.g. 150" />
-            </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="jane@example.com" />
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="event-date">Event Date <span class="required">*</span></label>
-              <input type="date" id="event-date" name="event-date" required />
-            </div>
-            <div class="form-group">
-              <label for="event-location">Event Location / Venue</label>
-              <input type="text" id="event-location" name="event-location" placeholder="123 Main St, Winnipeg, MB" />
-            </div>
+          <div class="form-group">
+            <label for="event-date">Event Date <span class="required">*</span></label>
+            <input type="date" id="event-date" name="event-date" required />
           </div>
-          <div class="form-group full-width">
-            <label for="message">Additional Details or Questions</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us anything else we should know about your event..."></textarea>
-          </div>
-        </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Estimated Group Size <span class="required">*</span></label>
+          <input type="number" id="guests" name="guests" required min="1" placeholder="e.g. 150" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Description</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your event — type, location, anything we should know..."></textarea>
+        </div>
 
         <div class="form-footer">
           <p class="form-note">Bookings start at <strong>$1,000</strong>. We'll confirm availability and send a custom quote after reviewing your request.</p>

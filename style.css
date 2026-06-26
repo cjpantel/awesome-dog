@@ -480,6 +480,31 @@ nav a.active {
   color: var(--yellow);
 }
 
+.menu-addons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 20px;
+}
+
+.addon-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--light);
+  border: 2px solid #EAE5DD;
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.addon-icon {
+  font-size: 1.1rem;
+}
+
 .menu-note {
   text-align: center;
   font-size: 0.85rem;
@@ -744,6 +769,9 @@ nav a.active {
 .booking-form {
   max-width: 780px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 fieldset {
@@ -773,7 +801,7 @@ legend {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .form-group.full-width {
