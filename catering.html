@@ -4,69 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catering &amp; Events – Awesomedog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
     <div class="header-inner">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <span class="logo-icon">🌭</span>
         <div>
-          <h1>Awesomedog</h1>
-          <p class="tagline">Winnipeg's Favourite Hot Dog Cart Since 1994</p>
+          <span class="logo-name">Awesomedog</span>
+          <span class="logo-tag">Carlton &amp; Portage · Winnipeg</span>
         </div>
-      </div>
+      </a>
       <nav>
         <a href="index.html">Home</a>
         <a href="catering.html" class="active">Catering &amp; Events</a>
+        <a href="catering.html" class="btn btn-nav">Book an Event</a>
       </nav>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.closest('header').classList.toggle('open')">&#9776;</button>
     </div>
   </header>
 
+  <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <h2>Catering &amp; Group Bookings</h2>
-      <p>Bring Winnipeg's favourite hot dog cart to your next event. We make it easy — and delicious.</p>
+      <div class="hero-badge">Events &amp; Catering</div>
+      <h1>We Come to You</h1>
+      <p>Bring Winnipeg's favourite hot dog cart to your next event. We make it easy, and your guests will love it.</p>
     </div>
   </section>
 
+  <!-- Event types -->
   <section class="catering-info">
     <div class="container">
+      <div class="section-header">
+        <h2>What We Cater</h2>
+        <p>From office lunches to wedding receptions — we've done it all.</p>
+      </div>
       <div class="info-grid">
         <div class="info-card">
           <div class="info-icon">💼</div>
           <h3>Employee Events</h3>
-          <p>Show your team some appreciation with a hot dog lunch or appreciation day. We handle the food so you can focus on your people.</p>
+          <p>Show your team some real appreciation. We handle the food so you can focus on your people. Hot dogs + happy employees = easy win.</p>
         </div>
         <div class="info-card">
           <div class="info-icon">🤝</div>
           <h3>Union Events</h3>
-          <p>Rally days, membership meetings, appreciation events — we're proud to serve the workers of Winnipeg.</p>
+          <p>Rally days, membership meetings, appreciation events — we're proud to serve the workers of Winnipeg. Let's feed the people.</p>
         </div>
         <div class="info-card">
           <div class="info-icon">💍</div>
           <h3>Weddings</h3>
-          <p>A late-night hot dog station at your wedding? Your guests will be talking about it for years. Truly unforgettable.</p>
+          <p>A late-night hot dog station at your wedding? Your guests will be talking about it for years. Trust us — it's always a hit.</p>
         </div>
         <div class="info-card">
           <div class="info-icon">🏒</div>
           <h3>Sport Tournaments</h3>
-          <p>From hockey tournaments to summer softball leagues, we fuel athletes and fans alike. Convenient, fast, and crowd-pleasing.</p>
+          <p>Hockey, softball, soccer — we fuel players and fans alike. Fast, crowd-pleasing, and built for high-volume service.</p>
         </div>
       </div>
 
       <div class="pricing-callout">
+        <div class="pricing-icon">🌭</div>
         <h3>Event bookings start at <span class="price">$1,000</span></h3>
-        <p>Pricing depends on group size, duration, and location. Fill out the form below and we'll get back to you with a custom quote.</p>
+        <p>Pricing depends on group size, duration, and location. Fill out the form below and we'll get back to you with a custom quote within 1–2 business days.</p>
       </div>
     </div>
   </section>
 
+  <!-- Booking Form -->
   <section class="booking-form-section">
     <div class="container">
-      <h2>Request a Quote</h2>
-      <p class="form-intro">Tell us about your event and we'll be in touch within 1–2 business days.</p>
+      <div class="section-header">
+        <h2>Request a Quote</h2>
+        <p>Tell us about your event and we'll get back to you fast.</p>
+      </div>
 
       <form class="booking-form" id="bookingForm" onsubmit="handleSubmit(event)">
 
@@ -147,9 +163,23 @@
   </section>
 
   <footer>
-    <div class="container">
-      <p><strong>Awesomedog</strong> · Corner of Carlton &amp; Portage, Winnipeg, MB</p>
-      <p>Family-owned since 1994 · <a href="catering.html">Catering &amp; Events</a></p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">🌭 Awesomedog</span>
+        <p>Winnipeg's favourite hot dog cart since 1994.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="catering.html">Catering &amp; Events</a>
+        <a href="mailto:hello@awesomedog.ca">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <p>Carlton &amp; Portage Ave, Winnipeg, MB</p>
+        <p>(204) 555-0187</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Awesomedog. Family-owned &amp; operated.</p>
     </div>
   </footer>
 

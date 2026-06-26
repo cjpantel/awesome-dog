@@ -3,92 +3,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Awesomedog – Winnipeg's Famous Hot Dog Cart</title>
+  <title>Awesomedog – Winnipeg's Favourite Hot Dog Cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
     <div class="header-inner">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <span class="logo-icon">🌭</span>
         <div>
-          <h1>Awesomedog</h1>
-          <p class="tagline">Winnipeg's Favourite Hot Dog Cart Since 1994</p>
+          <span class="logo-name">Awesomedog</span>
+          <span class="logo-tag">Carlton &amp; Portage · Winnipeg</span>
         </div>
-      </div>
+      </a>
       <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="catering.html">Catering &amp; Events</a>
+        <a href="catering.html" class="btn btn-nav">Book an Event</a>
       </nav>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.closest('header').classList.toggle('open')">&#9776;</button>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-inner">
-      <h2>The Real Deal,<br>Right on the Corner</h2>
-      <p>Family-owned and operated for over 30 years. Find us at the corner of <strong>Carlton &amp; Portage</strong>, right in the heart of Winnipeg.</p>
-      <a href="catering.html" class="btn">Book Us for Your Event</a>
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="container">
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">📍</div>
-          <h3>Where to Find Us</h3>
-          <p>Corner of Carlton &amp; Portage Ave, Winnipeg, MB. We're out there most days — come say hi!</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">👨‍👩‍👧‍👦</div>
-          <h3>Family Owned</h3>
-          <p>Still run by the same family that started it all over 30 years ago. Same recipes, same love, same corner.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🏆</div>
-          <h3>30+ Years Strong</h3>
-          <p>We've been serving Winnipeg since 1994. Generations of customers keep coming back — and we're not going anywhere.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎉</div>
-          <h3>Available for Events</h3>
-          <p>Catering packages starting at $1,000. Perfect for weddings, work events, tournaments, and more.</p>
-          <a href="catering.html" class="card-link">Get a quote →</a>
-        </div>
+      <div class="hero-badge">Family-Owned Since 1994</div>
+      <h1>Winnipeg's Best<br>Hot Dog Cart</h1>
+      <p>Serving the corner of <strong>Carlton &amp; Portage</strong> for over 30 years.<br>Rain, shine, or blizzard — we're out there.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn">See the Menu</a>
+        <a href="catering.html" class="btn btn-outline">Book for an Event</a>
       </div>
     </div>
   </section>
 
+  <!-- Quick info bar -->
+  <div class="info-bar">
+    <div class="info-bar-inner">
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <span>Carlton &amp; Portage Ave, Winnipeg</span>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-item">
+        <span class="info-icon">🕐</span>
+        <span>Mon–Fri 10am–4pm &nbsp;·&nbsp; Sat 11am–3pm</span>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-item">
+        <span class="info-icon">📞</span>
+        <span>(204) 555-0187</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Menu</h2>
+        <p>Classic dogs. Fresh toppings. Zero compromises.</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card featured">
+          <div class="menu-card-label">Fan Favourite</div>
+          <div class="menu-emoji">🌭</div>
+          <h3>The Classic</h3>
+          <p>All-beef dog, steamed bun, mustard, ketchup, relish, diced onion</p>
+          <span class="menu-price">$5</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🧅</div>
+          <h3>The Loaded</h3>
+          <p>All-beef dog, sauerkraut, grilled onions, spicy brown mustard, sport peppers</p>
+          <span class="menu-price">$6.50</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🧀</div>
+          <h3>The Cheesy</h3>
+          <p>All-beef dog, nacho cheese sauce, jalapeños, crispy fried onions</p>
+          <span class="menu-price">$6.50</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🥓</div>
+          <h3>The Prairie</h3>
+          <p>All-beef dog, peameal bacon, cheddar, BBQ sauce, pickled red onion</p>
+          <span class="menu-price">$7</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🌶️</div>
+          <h3>The Winnipeg Special</h3>
+          <p>All-beef dog, coleslaw, hot sauce, diced cucumber, our house spice blend</p>
+          <span class="menu-price">$7</span>
+        </div>
+        <div class="menu-card build">
+          <div class="menu-emoji">✏️</div>
+          <h3>Build Your Own</h3>
+          <p>Start with an all-beef dog and pick your toppings from our full spread</p>
+          <span class="menu-price">From $5</span>
+        </div>
+      </div>
+      <p class="menu-note">All dogs on a fresh steamed bun &nbsp;·&nbsp; Drinks &amp; chips available &nbsp;·&nbsp; Cash &amp; card accepted</p>
+    </div>
+  </section>
+
+  <!-- Story -->
   <section class="story">
     <div class="container story-inner">
       <div class="story-text">
-        <h2>Our Story</h2>
-        <p>Awesomedog started on the streets of Winnipeg over three decades ago. What began as one family's passion for great food and friendly service has grown into one of the city's most beloved institutions.</p>
-        <p>We've served customers through blizzards, heatwaves, Grey Cup parades, and everything in between. Rain or shine, you'll find us at the corner of Carlton and Portage, ready to serve.</p>
-        <p>Three decades. One family. One corner. That's Awesomedog.</p>
+        <div class="section-eyebrow">Our Story</div>
+        <h2>Same Corner.<br>Same Family.<br>30+ Years.</h2>
+        <p>Awesomedog started right here on the corner of Carlton and Portage in 1994. What began as one family's passion for real, honest food has become one of Winnipeg's most beloved landmarks.</p>
+        <p>We've served customers through blizzards, heatwaves, Grey Cup celebrations, and everything in between. The recipes haven't changed. The family hasn't changed. The corner definitely hasn't changed.</p>
+        <a href="catering.html" class="btn">Bring Us to Your Event</a>
       </div>
       <div class="story-visual">
         <div class="years-badge">
           <span class="years-number">30+</span>
           <span class="years-label">Years Serving<br>Winnipeg</span>
         </div>
+        <div class="story-stats">
+          <div class="stat">
+            <span class="stat-num">1994</span>
+            <span class="stat-label">Est.</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Family</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Corner</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-banner">
+  <!-- Find Us -->
+  <section class="find-us">
     <div class="container">
-      <h2>Hungry? Come Find Us.</h2>
-      <p>Corner of Carlton &amp; Portage · Winnipeg, MB · Most days!</p>
-      <a href="catering.html" class="btn btn-light">Plan an Event with Us</a>
+      <div class="section-header light">
+        <h2>Come Find Us</h2>
+        <p>We're hard to miss — just look for the cart at Carlton and Portage.</p>
+      </div>
+      <div class="find-grid">
+        <div class="find-card">
+          <div class="find-icon">📍</div>
+          <h3>Location</h3>
+          <p>Corner of Carlton Ave &amp; Portage Ave<br>Winnipeg, MB</p>
+        </div>
+        <div class="find-card">
+          <div class="find-icon">🕐</div>
+          <h3>Hours</h3>
+          <p>Mon–Fri: 10:00am – 4:00pm<br>Saturday: 11:00am – 3:00pm<br><em>Closed Sundays &amp; holidays</em></p>
+        </div>
+        <div class="find-card">
+          <div class="find-icon">📞</div>
+          <h3>Get in Touch</h3>
+          <p>(204) 555-0187<br><a href="mailto:hello@awesomedog.ca">hello@awesomedog.ca</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events CTA strip -->
+  <section class="events-cta">
+    <div class="container events-cta-inner">
+      <div>
+        <h2>Feeding a Crowd?</h2>
+        <p>Employee events, union rallies, weddings, sport tournaments — packages from $1,000.</p>
+      </div>
+      <a href="catering.html" class="btn btn-light">Get a Quote</a>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <p><strong>Awesomedog</strong> · Corner of Carlton &amp; Portage, Winnipeg, MB</p>
-      <p>Family-owned since 1994 · <a href="catering.html">Catering &amp; Events</a></p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">🌭 Awesomedog</span>
+        <p>Winnipeg's favourite hot dog cart since 1994.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="catering.html">Catering &amp; Events</a>
+        <a href="mailto:hello@awesomedog.ca">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <p>Carlton &amp; Portage Ave, Winnipeg, MB</p>
+        <p>(204) 555-0187</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Awesomedog. Family-owned &amp; operated.</p>
     </div>
   </footer>
 
